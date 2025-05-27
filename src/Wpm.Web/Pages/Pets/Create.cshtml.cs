@@ -23,6 +23,7 @@ public class CreateModel : PageModel
            .Breeds
            .Select(b => new SelectListItem(b.Name, b.Id.ToString())).ToList();
         Breeds = new SelectList(breeds, "Value", "Text");
+        
     }
 
     public async Task<IActionResult> OnPostAsync()
